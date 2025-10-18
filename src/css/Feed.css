@@ -1,0 +1,20 @@
+.feed{
+    flex-basis:87%;
+    padding-top:20px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:50px;
+    position:relative;
+    left:250px;
+}
+.styles{
+    flex-basis:92%;
+    display:flex;
+    padding-left:40px;
+    gap:50px;
+    flex-wrap:wrap;
+    position:relative;
+    left:125px;
+
+}

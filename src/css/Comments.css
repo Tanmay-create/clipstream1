@@ -1,0 +1,31 @@
+.comment{
+    display:flex;
+    margin-top:40px;
+    padding-left:20px;
+}
+.left{
+    display:flex;
+    gap:20px;
+}
+.userstyle{
+    border-radius:50%;
+    height:40px;
+    width:40px;
+    object-fit:cover;
+}.rest{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+.username{
+    font-weight:550;
+}
+.commenter-details p{
+    margin-bottom:10px;
+}
+.rest span{
+    font-weight:550;
+}
+.particulars{
+    font-size:19px;
+}

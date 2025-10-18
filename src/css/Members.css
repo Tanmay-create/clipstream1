@@ -1,0 +1,49 @@
+.video-1 {
+    width: 350px;
+}
+
+.video-1 .thumbnail-container {
+    position: relative;
+    padding-top: 56.25%;
+    overflow:hidden;
+    border-radius: 20px;
+    margin-bottom:10px;
+}
+
+.video-1 .thumbnail-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.channel-info{
+    display:flex;
+    font-size:17px;
+    font-weight:700;
+    overflow-wrap:hidden;
+    gap:10px;
+    align-items:center;
+}
+.channel-name{
+    display:flex;
+    padding-left:50px;
+    margin-bottom:5px;
+    gap:10px;
+    align-items:center;
+    
+}
+.video-1{
+    width:350px;
+}
+.circle{
+    border-radius:50%;
+    height:50px;
+    width:50px;
+}
+.figures{
+   margin-left:50px;
+}

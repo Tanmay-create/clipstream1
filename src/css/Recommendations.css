@@ -1,0 +1,8 @@
+.recommendations{
+    flex-basis:40%;
+    border:2px solid black;
+    border-radius:40px;
+    margin:20px;
+    box-shadow:-10px 10px 10px black;
+    margin-top:50px;
+}
