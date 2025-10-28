@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Video from './pages/Video'
 import {Routes, Route} from 'react-router-dom'
