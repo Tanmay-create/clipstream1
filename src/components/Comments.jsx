@@ -1,33 +1,46 @@
-import React from 'react'
-import Tanmay from '../assets/Tanmay.jpg'
-import '../css/Comments.css'
-const Comments = () => {
+import React from 'react';
+import '../css/Comments.css';
+
+const Comments = ({ author, text, time, likes, authorImg }) => {
+  // Format time
+  const formattedTime = new Date(time).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
+
   return (
     <div className="comment">
       <div className="left">
-        <div className="img"><img src={Tanmay} alt="commenter" className="userstyle" /></div>
+        <div className="img">
+          <img src={authorImg} alt="commenter" className="userstyle" />
+        </div>
         <div className="commenter-details">
-            <p className="username">@MissRealBolly <span>2 months ago</span></p>
-            <p className="particulars">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi deserunt aliquid, ea pariatur dolores voluptates tempore fugit deleniti beatae. Adipisci eligendi ad sunt doloremque, sit ut earum est saepe.</p>
-            <div className="rest">
+          <p className="username">
+            @{author} <span>{formattedTime}</span>
+          </p>
+          <p
+            className="particulars"
+            dangerouslySetInnerHTML={{ __html: text }}
+          ></p>
+
+          <div className="rest">
             <div className="dislike-like">
-            <div className="like">
-              <i class="fa-solid fa-thumbs-up"></i>
-              <span>3.2M</span>
+              <div className="like">
+                <i className="fa-solid fa-thumbs-up"></i>
+                <span>{likes}</span>
+              </div>
+              <i className="fa-solid fa-thumbs-down"></i>
             </div>
-            <i class="fa-solid fa-thumbs-down"></i>
-          </div>
-          
-         
             <span>Reply</span>
-            </div>
+          </div>
         </div>
       </div>
       <div className="right">
-        <i class="fa-solid fa-ellipsis-vertical"></i>
+        <i className="fa-solid fa-ellipsis-vertical"></i>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Comments
+export default Comments;

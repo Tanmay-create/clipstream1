@@ -8,6 +8,16 @@
     position:relative;
     left:250px;
 }
+.feed2{
+    flex-basis:87%;
+    padding-top:20px;
+    display:flex;
+    margin-top:250px;
+    position:relative;
+    left:150px;
+    justify-content:center;
+    align-items:center;
+}
 .styles{
     flex-basis:92%;
     display:flex;

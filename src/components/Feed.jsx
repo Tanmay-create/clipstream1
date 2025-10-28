@@ -3,7 +3,10 @@ import '../css/Feed.css'
 import Members from './Members'
 import {API_KEY} from '../data'
 import {useState, useEffect} from 'react'
+import { useContext } from 'react'
+import { AppContext } from '../context/context'
 const Feed = ({sidebar}) => {
+  const {sidebarData}=useContext(AppContext);
   const [dataa, setData]=useState([]);
   const fetching_data = async () => {
     let count = 0;
@@ -32,15 +35,39 @@ const Feed = ({sidebar}) => {
     fetching_data();
   }, []);
 
+  
+
 
   return (
-    <div className={`feed ${sidebar?"": "styles"}`}>
-      {dataa.map((item)=>{
-         return (
-         <Members item={item}/>
-        )
-      })} 
-    </div>
+    <>
+        {sidebarData === '' && (
+        <div className={`feed ${sidebar ? '' : 'styles'}`}>
+          {dataa.map((item) => (
+            <Members key={item.id} item={item} />
+          ))}
+        </div>
+      )}
+        {sidebarData === 'home' && (
+        <div className={`feed ${sidebar ? '' : 'styles'}`}>
+          {dataa.map((item) => (
+            <Members key={item.id} item={item} />
+          ))}
+        </div>
+      )}
+
+      {sidebarData === 'history' && (
+        <div className="feed2">History</div>
+      )}
+      {sidebarData === 'liked videos' && (
+        <div className="feed2">liked videos</div>
+      )}
+      {sidebarData === 'downloads' && (
+        <div className="feed2">downloads</div>
+      )}
+      {sidebarData === 'watch later' && (
+        <div className="feed2">watch later</div>
+      )}
+    </>
   )
 }
 
